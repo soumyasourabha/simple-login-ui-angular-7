@@ -1,0 +1,24 @@
+<div class="table-responsive-lg">
+<table id="role-table" class="table table-striped table-bordered" cellspacing="0">
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Roles</th>
+            <th>IP Address</th>
+            <th>Last Login</th>
+            <th>Last Logout</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users;i as index;">
+            <td>{{user.firstName | titlecase }} {{user.lastName | titlecase }}</td>
+            <td>{{user.roles }}</td>
+            <td>{{user.ip }}</td>    
+            <td>{{user.logInDtm | date:"dd-MM-yyyy HH:mm:ss" }}</td>
+            <td>{{user.logOutDtm | date:"dd-MM-yyyy HH:mm:ss" }}</td>
+        </tr>
+    </tbody>
+    <tfoot>
+    </tfoot>
+</table>
+</div>
